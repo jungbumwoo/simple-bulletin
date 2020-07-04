@@ -1,6 +1,6 @@
 process.env.NODE_ENV = "development";
 var nodemon = require("nodemon");
-nodemon("--exec babel-node --presets=es2015 ./src/index.js --watch ./src");
+nodemon("--exec babel-node --presets=@babel/env ./src/index.js --watch ./src");
 
 nodemon
   .on("start", function() {
