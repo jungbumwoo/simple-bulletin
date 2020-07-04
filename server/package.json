@@ -1,0 +1,18 @@
+{
+  "name": "simple-bulletin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "build": "babel src -d build --presets=es2015",
+    "start": "node ./build/main.js",
+    "development": "node ./scripts/development.js",
+    "test": "echo \"Error: no test specified \" && exit 1",
+    "dev": "nodemon ./src/index.js"
+  }
+}
