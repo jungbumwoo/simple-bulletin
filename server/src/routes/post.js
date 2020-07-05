@@ -1,5 +1,4 @@
 import express from "express";
-
 const router = express.Router();
 
 router.post("/", (req, res) => {
@@ -16,4 +15,4 @@ router.get("/:id", (req, res) => {
   });
 });
 
-export default post;
+export default router;
