@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router();
 
 router.post("/", (req, res) => {
-  console.log(req.body.contents);
+  console.log(`req.body.contents is ${req.body.contents}`);
   return res.json({
     success: true
   });
