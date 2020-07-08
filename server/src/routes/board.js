@@ -1,3 +1,7 @@
+import express from "express";
+import mysql from "../db/mysql";
+const router = express.Router();
+
 router.get("/:id", (req, res) => {
   if (!req.session.token) {
     return res.json({
@@ -41,3 +45,5 @@ router.get("/:id", (req, res) => {
     });
   });
 });
+
+export default router;

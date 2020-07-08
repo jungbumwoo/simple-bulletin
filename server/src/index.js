@@ -23,6 +23,8 @@ app.use(
 );
 app.use("/api", api);
 
+app.use("/", express.static(__dirname + "/../../client/build"));
+
 app.get("/test", (req, res) => {
     req.session.test = 1;
     const session = req.session.test;
