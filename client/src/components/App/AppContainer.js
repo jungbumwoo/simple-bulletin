@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 class AppContainer extends Component {
   render() {
+    const { isLoggIn } = this.props;
     return <App />;
   }
 }

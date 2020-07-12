@@ -1,6 +1,7 @@
 import express from "express";
 import mysql from "../db/mysql";
-import e from "express";
+import multer from "multer";
+const upload = multer();
 const router = express.Router();
 
 router.get("/token", (req, res) => {

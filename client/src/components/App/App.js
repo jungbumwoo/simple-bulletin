@@ -2,17 +2,18 @@ import React from "react";
 import classNames from "classnames/bind";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-const App = () => (
+const App = ({ isLoggedIn }) => (
   <Router>
-    <div>
-      <Route path="/" component={Main} />
-    </div>
-    <div>
-      This is Jungbum Woo.
-    </div>
+    <div>{isLoggedIn ? PrivateComponent() : PublicComponent()}</div>
   </Router>
 );
 
-const Main = () => <div>Main</div>;
+const PublicComponent = () => <div>not logged in</div>;
+
+const PrivateComponent = () => <div>loggedIn</div>;
 
 export default App;
+
+
+
+
