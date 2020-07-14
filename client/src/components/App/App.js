@@ -1,6 +1,9 @@
 import React from "react";
+import styles from "./styles.scss";
 import classNames from "classnames/bind";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import LoginContainer from "components/Login/loginContainer";
+const cx = classNames.bind(styles);
 
 const App = ({ isLoggedIn }) => (
   <Router>
@@ -8,7 +11,11 @@ const App = ({ isLoggedIn }) => (
   </Router>
 );
 
-const PublicComponent = () => <div>not logged in</div>;
+const PublicComponent = () => (
+  <div>
+    <LoginContainer />
+  </div>
+)
 
 const PrivateComponent = () => <div>loggedIn</div>;
 
