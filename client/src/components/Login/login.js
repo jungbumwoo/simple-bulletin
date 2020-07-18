@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./styles.scss";
 import classNames from "classnames/bind";
+import {  Link  } from "react-router-dom";
 const cx = classNames.bind(styles);
 const Login = ({ handleInput, username, password, inputSignInButton }) => (
   <div className={cx("container")}>
@@ -23,7 +24,9 @@ const Login = ({ handleInput, username, password, inputSignInButton }) => (
       <button className={cx("first")} onClick={inputSignInButton}>
         Sign In
       </button>
-      <button>Sign up</button>
+      <Link to="/new">
+        <button>Sign up</button>
+      </Link>
     </div>
   </div>
 );
