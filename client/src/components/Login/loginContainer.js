@@ -34,6 +34,12 @@ class LoginContainer extends Component {
     apiLogin(username, password);
   };
 
+  _inputSignUpButton = () => {
+    const { apiSignUp } = this.props;
+    const { username, password } = this.state;
+    apiSignUp(username, password);
+  };
+
   render() {
     const { username, password } = this.state;
     return (
@@ -42,6 +48,7 @@ class LoginContainer extends Component {
         username={username}
         password={password}
         inputSignInButton={this._inputSignInButton}
+        inputSignUpButton={this._inputSignUpButton}
       />
     );
   }
@@ -51,7 +58,9 @@ const mapStateToProps = state => ({});
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
     apiLogin: (username, password) => 
-        dispatch(userAction.apiLogin(username, password))
+        dispatch(userAction.apiLogin(username, password)),
+    apiSignUp: (username, password) => 
+        dispatch(userAction.apiSignUp(username, password))
 });
 
 export default connect(
