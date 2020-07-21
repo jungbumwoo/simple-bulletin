@@ -5,8 +5,8 @@ import * as userActions from "../../store/modules/user";
 
 class AppContainer extends Component {
   render() {
-    const { isLoggIn } = this.props;
-    return <App isLoggedIn={isLoggIn} />;
+    const { isLoggedIn } = this.props;
+    return <App isLoggedIn={isLoggedIn} />;
   }
 }
 

@@ -9,6 +9,7 @@ const cx = classNames.bind(styles);
 
 const App = ({ isLoggedIn }) => (
   <Router>
+    <div>{isLoggedIn}</div>
     <div>{isLoggedIn ? PrivateComponent() : PublicComponent()}</div>
   </Router>
 );
